@@ -1,0 +1,17 @@
+<h4><a href="/">&lt; Back to home</a></h4>
+<div class="threads-list">
+	<div class="start-new-thread"><a href="/new-thread/{{subforumID}}">Start a new thread</a></div>
+	{{# threads}}
+		<div class="thread">
+			<div class="thread-thumbnail">
+				<img class="thumbnail" src="../images/{{{thumbnail}}}">
+			</div>
+			<div class="thread-content">
+				<a class="thread-title" href="/thread/{{_id}}">{{title}}</a>
+				<div class="thread-date">{{shortDateString date}}</div>
+			</div>
+		</div>
+	{{/threads}}
+</div>
+{{!-- <script src="../javascripts/jquery-3.3.1.min.js" type="text/javascript"></script> --}}
+{{!-- <script src="../javascripts/resize_thumbnails.js" type="text/javascript"></script> --}}

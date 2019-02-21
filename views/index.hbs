@@ -1,0 +1,28 @@
+<div id="forums-list" class="forums-list">
+	{{# each forums}}
+		<div class="forum-category"><h2>{{{@key}}}</h2></div>
+		{{# each this}}
+			<div class="subforum">
+				<div class="forum-name"><a class="subforum-link" href="/subforum/{{_id}}">{{ name }}</a></div>
+				<div id="{{{subforumIndex}}}-index" class="new-posts"></div>
+				<div class="unread">0 unread</div>
+				{{!-- <p>{{ description }}, {{ numPosts }}, {{ dateCreated }}</p> --}}
+			</div>
+		{{/each }}
+	{{/each }}
+</div>
+<div class="latest-posts">
+	<h2 class="latest-posts-title">Latest Threads</h2>
+	{{# latestPosts }}
+		<div class="new-post">
+			<a href="/thread/{{post._id}}">{{post.title}}</a>
+			<div class="post-username">by <a href="/profile/{{post.username}}">{{post.username}}</a></div>
+			{{!-- <div class="num-views">{{numViews}} views,</div> --}}
+			<div class="date-posted">{{toDateString post.date}}</div>
+			<div class='subforum-name'>in {{subforum}}</div>
+		</div>
+	{{/latestPosts}}
+</div>
+{{# if user}}
+<script type="text/javascript" src="javascripts/get_count.js"></script>
+{{/if}}

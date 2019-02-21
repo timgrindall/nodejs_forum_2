@@ -1,0 +1,5 @@
+(-) make better error handling throughout the app (see notes in error-handling.txt)
+(-) beautify user profiles (style)
+(x) reverse order of posts on subforum page
+(-) implement opening images in modal window from threads
+(x) make thumbnails optimized pictures (less file space)

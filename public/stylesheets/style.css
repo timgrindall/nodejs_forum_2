@@ -1,0 +1,423 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: grey;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Layout styles */
+
+.navigation-links {
+	line-height: 30px
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	margin-top: 20px;
+}
+
+.navigation-links > a {
+	padding: 15px;
+	display: inline-block;
+}
+
+@media only screen and (min-width: 400px) {
+	.navigation-links {
+		display: inline-block;
+		float: right;
+		margin-left: 15px;
+	}
+
+	.user-profile {
+		display: inline-block;
+		float: right;
+		margin-left: 15px;
+	}
+
+	.update-profile {
+		float: right;
+		margin-left: 15px;
+	}
+}
+
+.page-wrapper {
+	padding: 30px;
+	padding-top: 10px;
+	margin: auto;
+	max-width: 1500px;
+}
+
+.user-profile {
+	line-height: 16px;
+	margin-top: 20px;
+	border: 1px solid white;
+}
+
+.user-profile > a {
+	padding: 15px;
+	display: inline-block;
+}
+
+.update-profile {
+	line-height: 16px;
+	margin-top: 20px;
+	border: 1px solid white;
+}
+
+.update-profile > a {
+	padding: 15px;
+	display: inline-block;
+}
+
+/* Styles for index page */
+
+.latest-posts-title {
+	color: black;
+}
+
+/* main forum list class*/
+.forums-list {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+/* main latest posts class*/
+.latest-posts {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+	.forums-list {
+		width: 47%;
+		margin-right: 30px;
+	}
+	.latest-posts {
+		width: 47%;
+	}
+}
+
+.subforum {
+	border: 1px solid white;
+	background-color: #141414;
+	color: white;
+	padding: 10px;
+}
+
+.forum-name {
+	display: inline-block;
+}
+
+.forum-name a {
+	text-decoration: none;
+	color: #00B7FF;
+}
+
+.forum-name a:hover {
+	/*text-decoration: underline;*/
+	color: white;
+}
+
+.new-posts {
+	display: inline-block;
+	color: lightgrey;
+	float: right;
+}
+
+.unread {
+	display: inline-block;
+	color: lightgrey;
+	display: none;
+}
+
+.new-post {
+	border: 1px solid white;
+	background-color: #141414;
+	color: white;
+	padding: 10px;	
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.new-post > a:hover {
+	color: lightgrey;
+}
+
+.num-views {
+	display: inline-block;
+}
+
+.date-posted {
+	display: inline-block;
+	float: right;
+}
+
+.subforum-name {
+	display: block;
+	color: grey;
+	/*margin-top: 10px;*/
+	line-height: 30px
+}
+
+.post-username {
+	display: inline-block;
+	color: white;
+	margin-left: 20px;
+}
+
+/* Styles for new thread page */
+.input label {
+	display: block;
+	padding: 2px 0;
+}
+
+.title_input {
+	width: 400px;
+}
+
+/* styles for subfourm page */
+.threads-list {
+	margin-top: 30px;
+}
+
+@media only screen and (min-width: 700px) {
+	.threads-list {
+		max-width: 600px;
+	}
+}
+
+.start-new-thread {
+	margin-bottom: 30px;
+}
+
+.thread {
+	border: 1px solid white;
+	background-color: #141414;
+	color: white;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 100px auto;
+	grid-template-rows: 100px;
+	grid-gap: 20px;
+}
+
+.thread-content {
+	grid-column: 2 / 3;
+}
+
+.thread-title {
+	display: inline-block;
+}
+
+.thread-date {
+	/*margin-left: 20px;*/
+	display: inline-block;
+	vertical-align: top;
+}
+
+.thread-thumbnail {
+	overflow: hidden;
+	height: 100px;
+	width: 100px;
+	grid-column: 1 / 2;
+}
+
+img.thumbnail {
+	display: block;
+	object-fit: cover;
+	margin: auto;
+	/* 
+	max-width: 100%;
+	max-height: 100%;
+	*/
+}
+
+@media only screen and (min-width: 360px) {
+	.thread-title {
+		margin-right: 20px;
+	}
+}
+
+/* styles for thread page */
+
+.reply {
+	margin-top: 50px;
+}
+
+.posts {
+	margin-top: 30px;
+}
+
+.post {
+	border: 1px solid white;
+	background-color: #141414;
+	color: white;
+	padding: 15px;
+	margin-top: 20px;
+}
+
+.textarea {
+	width: 100%;
+}
+
+.reply-button {
+	margin-top: 15px;
+}
+
+.submit-button {
+	margin-top: 15px;
+}
+
+.delete-button {
+	float: right;
+}
+
+.post-user {
+	margin-left: 30px;
+	float: right;
+}
+
+.post-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.post-date {
+
+}
+
+.post-content {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.modal {
+	position: absolute;
+	z-index: 1000;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+}
+
+.image {
+	display: block;
+}
+
+#modal-image {
+	display: block;
+	height: auto;
+	width: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+	.posts {
+		width: 75%;
+		max-width: 1000px
+	}
+
+	.textarea {
+		width: 75%;
+		max-width: 1000px;
+	}
+}
+
+@media only screen and (min-width: 1350px) {
+	.posts {
+		width: 50%;
+		max-width: 1000px
+	}
+
+	.textarea {
+		width: 50%;
+		max-width: 1000px;
+	}
+}
+
+/* styles for login and register pages */
+.form-field > label {
+	width: 75px;
+	padding: 10px;
+	color: white;
+	text-align: right;
+	display: inline-block;
+}
+
+.form-field > input {
+	margin: 10px;
+}
+
+.errors-container {
+	width: 300px;
+}
+
+.error_msg {
+	padding: 10px;
+	background-color: #f66;
+	margin: 10px;
+	border: 1px solid white;
+	color: darkred;
+	width: 100%;
+	margin-left: 0;
+}
+
+.success_msg {
+	padding: 10px;
+	background-color: #6f6;
+	margin: 10px;
+	border: 1px solid white;
+	color: darkgreen;
+	width: 100%;
+	margin-left: 0;
+}
+
+/* Styles for profile page */
+
+/*
+@media only screen and (min-width: 1000px) {
+	.profile-wrapper {
+		width: 75%;
+	}
+}
+*/
+
+.profile-picture {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+.profile-item-wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid white;
+}
+
+.profile-data-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 630px;
+}
+
+.profile-label {
+	display: inline-block;
+	color: white;
+}
+
+.profile-field {
+	display: inline-block;
+	color: white;
+	margin-left: 10px;
+}
+
+.bio-field {
+	color: white;
+	margin-top: 10px;
+}

@@ -1,0 +1,28 @@
+<h4><a href="/">&lt; Back to home</a></h4>
+
+<div class='profile-wrapper'>
+	<img src="../images/{{userData.profilePicture}}" class="profile-picture">
+	<div class="profile-data-wrapper">
+		<div class='profile-item-wrapper'>
+			<div class='profile-label'>Username: </div><div class="profile-field">{{userData.username}}</div>
+		</div>
+		<div class='profile-item-wrapper'>
+			<div class='profile-label'>Real Name: </div><div class="profile-field">{{userData.name}}</div>
+		</div>
+		<div class='profile-item-wrapper'>
+			<div class='profile-label'>Bio: </div><div class="bio-field">{{userData.bio}}</div>
+		</div>
+		<div class='profile-item-wrapper'>
+			<div class='profile-label'>Birthday: </div>
+			{{#if userData.birthdate}}
+			<div class="profile-field">{{shortDateString userData.birthdate}}</div>
+			{{/if}}
+		</div>
+		<div class='profile-item-wrapper'>
+			<div class='profile-label'>Joined: </div>
+			{{#if userData.joined}}
+			<div class="profile-field">{{shortDateString userData.joined}}</div>
+			{{/if}}
+		</div>
+	</div>
+</div>

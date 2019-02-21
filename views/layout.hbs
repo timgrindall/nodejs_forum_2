@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{title}} - 3D Artists Forum</title>
+    <link rel='stylesheet' href='/stylesheets/style.css?version=1.0' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  	<div class="page-wrapper">
+      <div class="navigation-links">
+        {{#if user}}
+          <a href="/logout">logout</a>
+        {{else}}
+          <a href="/register">register</a>
+          <a href="/login">login</a>
+        {{/if}}
+      </div>
+      {{#if user}}
+      <div class="user-profile">
+        <a href="/profile/{{user.username}}">{{user.username}}</a>
+      </div>
+      {{#if isProfile}}
+        <div class="update-profile">
+          <a href="/update-user">update profile</a>
+        </div>
+      {{/if}}
+      {{/if}}
+      <h1>{{title}}</h1>
+      <div class="errors-container">
+        {{#if success_msg}}
+          <div class="success_msg">{{success_msg}}</div>
+        {{/if}}
+
+        {{#if error_msg}}
+          <div class="error_msg">{{error_msg}}</div>
+        {{/if}}
+
+        {{#if error}}
+          <div class="error_msg">{{error}}</div>
+        {{/if}}
+      </div>
+    	{{{body}}}
+    </div>
+  </body>
+</html>

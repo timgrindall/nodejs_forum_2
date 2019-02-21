@@ -1,0 +1,19 @@
+<h4><a href="/">&lt; Back to home</a></h4>
+<h4><a href="/subforum/{{subforumID}}">&lt; Back to Subforum</a></h4>
+<h4>Posting in {{forumName}} > {{subforumName}}</h4>
+
+<form action="/create-thread/{{subforumID}}" method="post" enctype="multipart/form-data">
+	<div class='input'>
+		<label for="title">Title of Thread:</label>
+		<input class="title_input" type="text" id="title" name="title">
+	</div>
+	<div class='input'>
+		<label for="content">Content:</label>
+		<textarea rows="10" cols="120" wrap="hard" name="content"></textarea>
+	</div>
+	<div class='input'>
+		<label for="images">Images:</label>
+		<input type="file" name="images" multiple="multiple">
+	</div>
+	<button class="submit-button" type="submit">Post</button>
+</form>

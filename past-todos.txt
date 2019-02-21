@@ -1,0 +1,20 @@
+-update number of new posts on front page
+-implement most recent posts
+-make better error handling throughout the app (see notes in error-handling.txt)
+-implement thumbnails and pictures
+-implement sessions and login page
+-add image support to new-thread and thread page
+-redirect to page you were on after login
+-implement deleting posts
+-implement pictures in replies
+-invert order of new posts on font page
+-resize thumbnails
+(x) redirect to page you were on after login
+(x) implement deleting posts
+(x) implement pictures in replies
+(x) implement user profiles
+(x) refactor code for number of new posts
+(x) display username for user
+(x) fix update profile button
+(x) fix profile picture link
+(x) check for username already taken

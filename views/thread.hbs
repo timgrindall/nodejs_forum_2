@@ -1,0 +1,44 @@
+<h4><a href="/">&lt; Back to home</a></h4>
+<h4><a href="/subforum/{{subforumID}}">&lt; Back to Subforum</a></h4>
+{{!-- <p class="thumbnail">thumbnail: {{{thumbnail}}}</p> --}}
+<div class="posts">
+	{{# if canDelete}}
+		<form action="/delete-thread/{{threadID}}" method="post">
+			<button class="delete-button" type="submit">Delete thread</button>
+		</form>
+	{{/if}}
+	<h4>Started: {{shortDateString date}}</h4>
+	{{# posts}}
+		<div class="post">
+			<div class="post-date">{{shortDateString date}}<span class="post-user">by <a href="/profile/{{username}}">{{username}}</a></span></div>
+			<div class="post-content">{{content}}</div>
+			{{#each images}}
+				<a class='image'><img class='post-image' src="../images/{{{this}}}"></a>
+			{{/each}}
+		</div>
+	{{/posts}}
+</div>
+<div class="reply">
+	<h4>Add a reply: </h4>
+	<form action="/create-post/{{threadID}}" method="post" enctype="multipart/form-data">
+		<div class='input'>
+			<textarea class="textarea" rows="10" cols="100" wrap="hard" name="content"></textarea>
+		</div>
+		<div class='input'>
+			<label for="images">Images:</label>
+			<input type="file" name="images" multiple="multiple">
+		</div>
+		<button class="reply-button" type="submit">Reply</button>
+	</form>
+</div>
+<div id="modal_viewer">
+	test text
+</div>
+{{# if user}}
+	<script type="text/javascript">
+		var threadID = "{{{threadID}}}";
+	</script>
+	<script src="../javascripts/update_count.js" type="text/javascript"></script>
+{{/if}}
+	<script src="../javascripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="../javascripts/image_modal.js" type="text/javascript"></script>
