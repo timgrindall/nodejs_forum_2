@@ -1,4 +1,0 @@
--make thumbnails required
--require thumbnails to be square?
--check for malicious input
--check for errors in forms (threads and posts)(isn't that called validation?)
