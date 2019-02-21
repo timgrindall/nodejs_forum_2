@@ -36,7 +36,6 @@ router.get('/resize', async (req, res, next) => {
 
 if (setup) {
 
-    /*
     var forums = [];
 
     //create forums collections and documents
@@ -60,9 +59,9 @@ if (setup) {
             }
         });
     }
-    */
     
-    /*
+    
+
     var subforums = [[],[],[],[],[],[]]; // first dimension length must match number of forum categories (length of forums document array)
     var subforumIndex = 0;
 
@@ -123,10 +122,11 @@ if (setup) {
             });
         }
     }
-    */
+    
 
     /*
     // this section has to be done as a second step
+    // Please comment out the previous section and then uncomment this section and run the code again. This will update the parentID's of the subofurms with their proper forum IDs.
     models.forums.find({}).then( function (doc) {
 
         // get objectID and update subforums[n] parentID ...
